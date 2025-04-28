@@ -5,6 +5,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Responsive Page</title>
   <link rel="stylesheet" href="styles.css">
+  
+  <!-- SweetAlert2 CDN -->
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 </head>
 <body>
 
@@ -24,6 +27,19 @@
     <button id="alertButton">Click Me!</button>
   </section>
 
-  <script src="script.js"></script>
+  <!-- <script src="script.js"></script> -->
+
+  <!-- SweetAlert2 Button Click Script -->
+  <script>
+    document.getElementById('alertButton').addEventListener('click', function() {
+      Swal.fire({
+        title: 'Good Job!',
+        text: 'You clicked the button!',
+        icon: 'success',
+        confirmButtonText: 'OK'
+      });
+    });
+  </script>
+
 </body>
 </html>
